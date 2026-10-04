@@ -1,0 +1,661 @@
+/* =========================================
+   PERSONAL PORTFOLIO - STYLE.CSS
+   ========================================= */
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+    background: #f5f7fb;
+    color: #1e293b;
+}
+
+
+/* =========================================
+   HEADER / HERO
+   ========================================= */
+
+header {
+    min-height: 500px;
+    padding: 90px 20px 70px;
+    text-align: center;
+    color: white;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.25), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(96, 165, 250, 0.18), transparent 30%),
+        linear-gradient(135deg, #020617, #0f172a 55%, #172554);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Decorative background circles */
+
+header::before {
+    content: "";
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+
+    top: -100px;
+    left: -80px;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+
+    bottom: -200px;
+    right: -100px;
+}
+
+
+header h1 {
+    position: relative;
+    z-index: 1;
+
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -1px;
+
+    margin-bottom: 12px;
+}
+
+
+header > p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 650px;
+    margin: 0 auto 35px;
+
+    color: #cbd5e1;
+    font-size: 19px;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+nav {
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+
+    padding: 10px 20px;
+
+    color: #e2e8f0;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    border: 1px solid transparent;
+    border-radius: 30px;
+
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border-color: rgba(255, 255, 255, 0.12);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: -60px auto 70px;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
+
+section {
+    background: white;
+
+    padding: 45px;
+
+    margin-bottom: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.07);
+}
+
+
+section h2 {
+    position: relative;
+
+    margin-bottom: 30px;
+
+    color: #0f172a;
+
+    font-size: 31px;
+    font-weight: 750;
+}
+
+
+/* Small blue line below heading */
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 4px;
+
+    margin-top: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #60a5fa
+    );
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+
+#about {
+    text-align: center;
+}
+
+
+#about img {
+    display: block;
+
+    width: 190px;
+    height: 190px;
+
+    object-fit: cover;
+
+    margin: 0 auto 28px;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+
+    outline: 4px solid #2563eb;
+
+    box-shadow:
+        0 15px 35px rgba(37, 99, 235, 0.2);
+}
+
+
+#about p {
+    max-width: 800px;
+
+    margin: 16px auto;
+
+    color: #64748b;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   SKILLS
+   ========================================= */
+
+#skills dl {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+#skills dt {
+    padding: 18px 20px 5px;
+
+    color: #2563eb;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    background: #f8fafc;
+
+    border-radius: 10px 10px 0 0;
+}
+
+
+#skills dd {
+    margin: 0;
+
+    padding: 0 20px 18px;
+
+    color: #64748b;
+
+    background: #f8fafc;
+
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* =========================================
+   PROJECTS
+   ========================================= */
+
+article {
+    position: relative;
+
+    padding: 30px;
+
+    margin-bottom: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #ffffff
+        );
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+article::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background: linear-gradient(
+        #2563eb,
+        #60a5fa
+    );
+}
+
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+
+article:hover {
+    transform: translateY(-6px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.1);
+}
+
+
+article h3 {
+    margin-bottom: 12px;
+
+    color: #0f172a;
+
+    font-size: 21px;
+}
+
+
+article p {
+    color: #64748b;
+}
+
+
+article a {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: #2563eb;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+
+article a:hover {
+    color: #1d4ed8;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   CONTACT FORM
+   ========================================= */
+
+form {
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+
+form p {
+    margin-bottom: 22px;
+}
+
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    color: #1e293b;
+
+    background: #f8fafc;
+
+    border: 1px solid #dbe2ea;
+
+    border-radius: 10px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
+}
+
+
+input:focus,
+textarea:focus {
+    outline: none;
+
+    background: white;
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+button {
+    padding: 13px 32px;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    border: none;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.3);
+}
+
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    background: #020617;
+
+    border-top: 1px solid #1e293b;
+}
+
+
+footer p {
+    margin: 5px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    header {
+        min-height: 450px;
+
+        padding: 70px 20px 50px;
+    }
+
+
+    header h1 {
+        font-size: 45px;
+    }
+
+
+    main {
+        width: 92%;
+
+        margin-top: -40px;
+    }
+
+
+    section {
+        padding: 35px;
+    }
+
+
+    #skills dl {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        min-height: 420px;
+
+        padding: 60px 15px 40px;
+    }
+
+
+    header h1 {
+        font-size: 36px;
+    }
+
+
+    header > p {
+        font-size: 16px;
+    }
+
+
+    nav ul {
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+
+    nav a {
+        padding: 7px 18px;
+    }
+
+
+    main {
+        width: 94%;
+
+        margin-top: -30px;
+    }
+
+
+    section {
+        padding: 28px 20px;
+
+        border-radius: 14px;
+    }
+
+
+    section h2 {
+        font-size: 26px;
+    }
+    #about img {
+        width: 155px;
+        height: 155px;
+    }
+    #about p {
+        font-size: 15px;
+    }
+    article {
+        padding: 24px 20px;
+    }
+    article h3 {
+        font-size: 19px;
+    }
+    button {
+        width: 100%;
+    }
+}
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+    section {
+        padding: 23px 16px;
+    }
+    #about img {
+        width: 135px;
+        height: 135px;
+    }
+}
